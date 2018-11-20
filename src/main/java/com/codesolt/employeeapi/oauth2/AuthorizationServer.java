@@ -13,6 +13,7 @@ import org.springframework.security.oauth2.provider.token.store.InMemoryTokenSto
 @EnableAuthorizationServer
 public class AuthorizationServer  extends AuthorizationServerConfigurerAdapter {
 	
+	//No password enconder needed for this demo (non-prod env) proposes
     @Override
     public void configure(AuthorizationServerSecurityConfigurer security) throws Exception {
         security.passwordEncoder(NoOpPasswordEncoder.getInstance())
