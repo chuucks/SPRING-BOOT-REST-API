@@ -38,6 +38,8 @@ public class EmployeeService {
 	public Employee updateEmployee(Long id, EmployeeRequest request) {
 		employeeExists(id);
 		Employee employee = new ModelMapper().map(request, Employee.class);
+		employee.setId(id);
+		employee.setStatus(EmployeeDictionary.ACTIVE_STATUS);
 		return repo.save(employee);		
 	}
 	
