@@ -1,8 +1,8 @@
 # SPRING-BOOT-REST
 ## REST API with Spring Boot 
-###Includes embeed H2 Database, embeed Tomcat server, documentation with Swagger 2 and Authorization with OAUTH2 server
+### Includes embeed H2 Database, embeed Tomcat server, documentation with Swagger 2 and Authorization with OAUTH2 server
 
-#### Includes a small CRUD for a Employee Entity.
+### Includes a small CRUD for a Employee Entity.
 
 To run locally:
 * mvn spring-boot:run
