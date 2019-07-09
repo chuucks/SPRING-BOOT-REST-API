@@ -1,0 +1,23 @@
+apiVersion: extensions/v1beta1
+kind: Deployment
+metadata:
+  name: {{ .Release.Name }}
+  labels:
+    name: {{ .Release.Name }}
+    {{- template "labels" . }}
+spec:
+  replicas: {{ .Values.replicaCount }}
+  template:
+    metadata:
+      labels:
+        app: {{ .Release.Name }}
+    spec:
+      containers:
+      - name: greeting
+        image: {{ .Values.springapp.image }}:{{ .Values.image.tag }}
+        imagePullPolicy: {{ .Values.image.imagePullPolicy }}
+        ports:
+        - containerPort: {{ .Values.service.internalPort }}
+          name: "http"
+        - containerPort: {{ .Values.service.internalDebugPort }}
+          name: "debug"

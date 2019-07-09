@@ -1,0 +1,14 @@
+springapp:
+  image: codesolt/spring
+  replicaCount: 1
+
+image:
+  tag: 0.1.0
+  pullPolicy: IfNotPresent
+
+service:
+  type: LoadBalancer
+  externalPort: 80
+  internalPort: 8080
+  externalDebugPort: 5005
+  internalDebugPort: 5005
