@@ -61,3 +61,11 @@ For the following section make sure you have a Spring Boot fat jar built:
 `kubectl config use-context <aws-context>`  
 2. Deploy to EKS cluster with HElM
 `helm install --name springapp springapp`
+3. Delete deploy, service and pods with (if needed):
+`helm delete --purge springapp
+
+### Skaffold support
+1. Install Skaffold with brew on your machine:
+`brew install skaffold`
+2. Run in the project directory to deploy your deployment & service:
+`skaffold dev`
