@@ -53,7 +53,13 @@ For the following section make sure you have a Spring Boot fat jar built:
 `kubectl get all` 
 
 ### K8s using Helm
-1.Deploy with helm template using:
+1. Install Helm in your machine:
+`brew install helm`
+2. Create a Tiller in your cluster
+`kubectl -n kube-system create sa tiller`
+`kubectl create clusterrolebinding tiller --clusterrole cluster-admin --serviceaccount=kube-system:tiller`
+`helm init --service-account tiller`
+3.Deploy with helm template using:
 `helm install --name springapp springapp`
 
 ### EKS support
