@@ -1,0 +1,7 @@
+FROM debian:9-slim
+COPY target/employee-api-1.0.0.jar /root/app.jar
+COPY slimjre /root/slimjre
+EXPOSE 8080 5005
+WORKDIR /root
+ENV _JAVA_OPTIONS '-agentlib:jdwp=transport=dt_socket,server=y,suspend=n,address=5005'
+#ENTRYPOINT ["./slimjre/bin/java","-jar","app.jar"]

@@ -13,7 +13,7 @@ spec:
         app: {{ .Release.Name }}
     spec:
       containers:
-      - name: greeting
+      - name: springapp
         image: {{ .Values.springapp.image }}:{{ .Values.image.tag }}
         imagePullPolicy: {{ .Values.image.pullPolicy }}
         ports:
