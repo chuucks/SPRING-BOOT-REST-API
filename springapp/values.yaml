@@ -1,6 +1,6 @@
 springapp:
   image: codesolt/spring
-  replicaCount: 1
+  replicaCount: 2
 
 image:
   tag: 0.1.0

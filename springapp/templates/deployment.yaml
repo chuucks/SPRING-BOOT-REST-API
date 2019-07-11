@@ -6,7 +6,7 @@ metadata:
     name: {{ .Release.Name }}
     {{- template "labels" . }}
 spec:
-  replicas: {{ .Values.replicaCount }}
+  replicas: {{ .Values.springapp.replicaCount }}
   template:
     metadata:
       labels:
@@ -15,7 +15,7 @@ spec:
       containers:
       - name: greeting
         image: {{ .Values.springapp.image }}:{{ .Values.image.tag }}
-        imagePullPolicy: {{ .Values.image.imagePullPolicy }}
+        imagePullPolicy: {{ .Values.image.pullPolicy }}
         ports:
         - containerPort: {{ .Values.service.internalPort }}
           name: "http"
