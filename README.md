@@ -22,8 +22,9 @@ Feel free to reach me at carlos.salazar@codesolt.com or find out more about me a
 
 ## Added support for Docker & K8s
 
-For all the following section make sure you have a Spring Boot fat jar built:
+* For all the following section make sure you have a Spring Boot fat jar built:
 `mvn clean package spring-boot:repackage`
+* Slides of a talk: https://docs.google.com/presentation/d/1pCq2Tihit8M2iY_4mr91zoIKO3b2nvFg7BrJHlblXBU/edit?usp=sharing
 
 ### Docker:
 1. Build the image: `docker image build -t codesolt/spring:0.1.0 .`
