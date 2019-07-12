@@ -3,7 +3,7 @@ springapp:
   replicaCount: 2
 
 image:
-  tag: 0.1.0
+  tag: 0.1.3
   pullPolicy: IfNotPresent
 
 service:

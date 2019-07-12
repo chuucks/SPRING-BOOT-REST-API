@@ -7,4 +7,3 @@ deploy:
   kubectl:
     manifests:
       - app.yaml
-
