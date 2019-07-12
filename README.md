@@ -1,6 +1,6 @@
 # SPRING-BOOT-REST
 ## REST API with Spring Boot 
-### Includes embeed H2 Database, embeed Tomcat server, documentation with Swagger 2 and Authorization with OAUTH2 server
+### Includes embeed H2 Database, embeed Tomcat server, documentation with Swagger 2 and support for Docker and K8s
 
 ### Includes a small CRUD for a Employee Entity.
 
@@ -15,8 +15,6 @@ To run repackaged jar:
 
 See Swagger documentation at:
 * http://localhost:8080/
-
-*Requires OAUTH2 authentication for consuming*
 
 *See schema and data files for DB definition*
 
