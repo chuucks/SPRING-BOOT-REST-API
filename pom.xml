@@ -23,8 +23,8 @@
 		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
 		<java.version>1.8</java.version>
 		<spring-cloud.version>Greenwich.M1</spring-cloud.version>
-		<docker.image>codesolt/spring</docker.image>
-		<docker.tag>0.1.1</docker.tag>
+		<docker.image.name>codesolt/spring</docker.image.name>
+		<docker.image.version>0.1.3</docker.image.version>
 	</properties>
 
 	<dependencies>
@@ -122,6 +122,9 @@
 					<from>
 						<image>openjdk:8-jdk-alpine</image>
 					</from>
+					<to>
+						<image>${docker.image.name}:${docker.image.version}</image>
+					</to>
 					<container>
 						<environment>
 							<_JAVA_OPTIONS>'-agentlib:jdwp=transport=dt_socket,server=y,suspend=n,address=5005'</_JAVA_OPTIONS>
